@@ -1,0 +1,58 @@
+body {
+  background: #191919;
+  color: #ffffff;
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+h1 {
+  letter-spacing: 3px;
+  font-size: 47px;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+}
+.title i{
+  font-size: 35px;
+}
+
+.month{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:45px;
+  height: 30px;
+  width: 60vw;
+  border: #333 solid 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.month:hover{
+  background-color: #333;
+  color: white;
+}
+.month i{
+  font-size: 11px;
+  margin-left:40%;
+
+}
+.months{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+#name{
+  font-size: 17px;
+  font-weight: 600;
+}
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
