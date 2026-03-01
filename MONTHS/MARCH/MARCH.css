@@ -1,0 +1,145 @@
+body {
+  background: #191919;
+  color: #ffffff;
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+h1 {
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+}
+i{
+  font-size: 25px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 8px;
+  line-height: 1.7;
+  cursor: pointer;
+  overflow: hidden;
+}
+.cell-days {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.cell .day {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  font-size: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: all 0.2s ease 0;
+}
+.hours{
+  opacity: 1;
+  z-index: 3;
+  flex-direction: column;
+  transition: all 0.2s ease 0.2s;
+}
+.cell:hover .hours {
+  opacity: 0;
+  transition: all 0.1s ease 0;
+}
+.cell:hover .day {
+  opacity: 1;
+  transition: all 0.2s ease 0.2s;
+}
+.day-fill {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: #333;
+  transform: translateY(100%);
+  transition: all 0.2s ease 0.1s;
+}
+.cell:hover .day-fill {
+  transform: translateY(0);
+  opacity: 1;
+}
+span{
+  font-size: 10px;
+  padding-bottom: 17px;
+}
+.exm{
+  width: 59px;
+  height: 59px;
+  border: #ffb800 solid 1px;
+}
+  /* NO DAY*/
+.h0{
+  background: #333;
+  opacity: 0.4;
+}
+
+  /* x < 2H */
+.h1{
+  background: #852e47;
+}
+
+  /* x < 4H */
+.h2{
+  background:#c2441c ;
+}
+
+  /* x < 6H */
+.h3{
+  background:rgb(74, 90, 48) ;
+}
+
+  /* x > 6H */
+.h4{
+  background:#0d244d ;
+}
+.h5{
+  background:#5e3c5d ;
+}
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.menu i{
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.fa-house{
+  margin: 0 10px 0 7px;
+}
